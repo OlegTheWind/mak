@@ -48,11 +48,11 @@ button{
     border: 0;
     background: transparent;
 }
-.button{
+.round-button{
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    background-color: #FF3E79;
+    /*background-color: #FF3E79;*/
 }
 
 .menu_upper{
@@ -75,7 +75,7 @@ button{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
-    !important;
+!important;
 }
 .highlight{
     width: 4px;
@@ -94,8 +94,10 @@ button{
 .button-b{
     display: flex;
     align-items: center;
-    padding: 16px 0 0 0 ;
+    padding: 16px 0 0 10px ;
 }
+
+
 .slide__button{
     color: #7E7E82;
 }
@@ -103,11 +105,24 @@ button{
 .background__img{
     padding-top: 16px
 }
+.upper-menu__icon_burger-button{
+    background-image: url("img/svg_full/burger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
 
 
 @media (min-width: 320px) {
 
-    .button_list2 .button,
+    .upper-menu__icon_call-button,
+    .upper-menu__icon_chat-button,
+    .upper-menu__icon_profile-button,
     .upper-menu__icon-full{
         display: none;
     }
@@ -123,9 +138,7 @@ button{
         margin-top: 10px;
     }
 
-    .button_list1,
-    .button_list2,
-    .button_list3{
+    .menu_upper{
         gap: 16px;
         align-items: center;
     }
@@ -185,6 +198,11 @@ button{
     .header-nav__btn{
         margin-right: auto;
     }
+    .upper-menu__icon_call-button,
+    .upper-menu__icon_chat-button,
+    .upper-menu__icon_profile-button{
+        display: block;
+    }
 
 
     .divider1{
@@ -201,18 +219,16 @@ button{
         background: #EAEAEA;
     }
     .main__title{
-         display: flex;
-         gap: 10px;
-     }
+        display: flex;
+        gap: 10px;
+    }
 
     .menu_upper{
         justify-content: space-between;
         padding: 10px;
     }
 
-    .button_list1 .button,
-    .button_list2 .button,
-    .button_list3 .button{
+    .round-button{
         gap: 16px;
         align-items: center;
     }
@@ -266,9 +282,15 @@ button{
 
 }
 @media (min-width: 1120px) {
-    .button_list1 .button,
-    .button_list2 .button,
-    .button_list3 .button,
+    .upper-menu__icon_burger-button,
+    .divider1,
+    .header-nav__btn,
+    .upper-menu__icon_call-button,
+    .upper-menu__icon_chat-button,
+    .upper-menu__icon_profile-button,
+    .divider2,
+    .upper-menu__icon_repair-button,
+    .upper-menu__icon_check-status-button,
     .header-nav__btn,
     .divider1{
         display: none;
@@ -285,17 +307,6 @@ button{
         align-items: center
     }
 
-    .upper-menu__icon_repair-button .button{
-        background-image: url(/img/svg/repair.svg);
-        background-repeat: no-repeat;
-        background-size: auto;
-        width: 50%;
-        height: 50%;
-    }
-    .divider1,
-    .divider2{
-        display: none;
-    }
     .slide__menu{
         display: flex;
         gap: 0;
@@ -307,6 +318,10 @@ button{
     }
     .slide__button{
         padding: 10px 20px;
+    }
+    .upper-menu__icon_repair-button-full,
+    .upper-menu__icon_check-status-button-full{
+        display: block;
     }
 
 }
